@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TestTask/1.0.0": {
+        "dependencies": {
+          "hostdbmgd": "1.0.0.0",
+          "hostmgd": "1.0.0.0"
+        },
+        "runtime": {
+          "TestTask.dll": {}
+        }
+      },
+      "hostdbmgd/1.0.0.0": {
+        "runtime": {
+          "hostdbmgd.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "25.0.6917.8825"
+          }
+        }
+      },
+      "hostmgd/1.0.0.0": {
+        "runtime": {
+          "hostmgd.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "25.0.6917.8825"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestTask/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "hostdbmgd/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "hostmgd/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:\Users\sasha\source\repos\TestTask\obj\Release\net6.0-windows\TestTask.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sasha\source\repos\TestTask\obj\Release\net6.0-windows\TestTask.AssemblyInfoInputs.cache
+C:\Users\sasha\source\repos\TestTask\obj\Release\net6.0-windows\TestTask.AssemblyInfo.cs
+C:\Users\sasha\source\repos\TestTask\obj\Release\net6.0-windows\TestTask.csproj.CoreCompileInputs.cache
+C:\Users\sasha\source\repos\TestTask\bin\Release\net6.0-windows\TestTask.deps.json
+C:\Users\sasha\source\repos\TestTask\bin\Release\net6.0-windows\TestTask.dll
+C:\Users\sasha\source\repos\TestTask\bin\Release\net6.0-windows\TestTask.pdb
+C:\Users\sasha\source\repos\TestTask\bin\Release\net6.0-windows\hostdbmgd.dll
+C:\Users\sasha\source\repos\TestTask\bin\Release\net6.0-windows\hostmgd.dll
+C:\Users\sasha\source\repos\TestTask\obj\Release\net6.0-windows\TestTask.csproj.AssemblyReference.cache
+C:\Users\sasha\source\repos\TestTask\obj\Release\net6.0-windows\TestTask.csproj.Up2Date
+C:\Users\sasha\source\repos\TestTask\obj\Release\net6.0-windows\TestTask.dll
+C:\Users\sasha\source\repos\TestTask\obj\Release\net6.0-windows\refint\TestTask.dll
+C:\Users\sasha\source\repos\TestTask\obj\Release\net6.0-windows\TestTask.pdb
+C:\Users\sasha\source\repos\TestTask\obj\Release\net6.0-windows\ref\TestTask.dll

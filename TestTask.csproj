@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Reference Include="hostdbmgd">
+	    <HintPath>D:\Program Files\Nanosoft AS\nanoCAD x64 25.0\bin\hostdbmgd.dll</HintPath>
+	  </Reference>
+	  <Reference Include="hostmgd">
+	    <HintPath>D:\Program Files\Nanosoft AS\nanoCAD x64 25.0\bin\hostmgd.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "TestTask": {
+      "commandName": "Project"
+    },
+    "NanoCAD": {
+      "commandName": "Executable",
+      "executablePath": "D:\\Program Files\\Nanosoft AS\\nanoCAD x64 25.0\\nCadS.exe"
+    }
+  }
+}

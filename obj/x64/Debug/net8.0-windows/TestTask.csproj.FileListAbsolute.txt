@@ -1,0 +1,14 @@
+C:\Users\sasha\source\repos\TestTask\bin\x64\Debug\net8.0-windows\TestTask.deps.json
+C:\Users\sasha\source\repos\TestTask\bin\x64\Debug\net8.0-windows\TestTask.dll
+C:\Users\sasha\source\repos\TestTask\bin\x64\Debug\net8.0-windows\TestTask.pdb
+C:\Users\sasha\source\repos\TestTask\obj\x64\Debug\net8.0-windows\TestTask.csproj.AssemblyReference.cache
+C:\Users\sasha\source\repos\TestTask\obj\x64\Debug\net8.0-windows\Interop.nanoCAD.dll
+C:\Users\sasha\source\repos\TestTask\obj\x64\Debug\net8.0-windows\TestTask.csproj.ResolveComReference.cache
+C:\Users\sasha\source\repos\TestTask\obj\x64\Debug\net8.0-windows\TestTask.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sasha\source\repos\TestTask\obj\x64\Debug\net8.0-windows\TestTask.AssemblyInfoInputs.cache
+C:\Users\sasha\source\repos\TestTask\obj\x64\Debug\net8.0-windows\TestTask.AssemblyInfo.cs
+C:\Users\sasha\source\repos\TestTask\obj\x64\Debug\net8.0-windows\TestTask.csproj.CoreCompileInputs.cache
+C:\Users\sasha\source\repos\TestTask\obj\x64\Debug\net8.0-windows\TestTask.dll
+C:\Users\sasha\source\repos\TestTask\obj\x64\Debug\net8.0-windows\refint\TestTask.dll
+C:\Users\sasha\source\repos\TestTask\obj\x64\Debug\net8.0-windows\TestTask.pdb
+C:\Users\sasha\source\repos\TestTask\obj\x64\Debug\net8.0-windows\ref\TestTask.dll
