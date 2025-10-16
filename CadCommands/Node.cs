@@ -1,13 +1,39 @@
-﻿using System;
+﻿using HostMgd.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Teigha.DatabaseServices;
 
 namespace TestTask.CadCommands
 {
     public partial class Node
     {
+        /// <summary>
+        /// Добавляет строку в контекстное меню
+        /// </summary>
+        [Teigha.Runtime.CommandMethod("pdCreateMenu")]
+        public void PdCreateMenu()
+        {
+            ContextMenuExtension mnu = new()
+            {
+                Title = "Создание графа"
+            };
+            HostMgd.ApplicationServices.Application.AddDefaultContextMenuExtension(mnu);
+
+            MenuItem mnuCreateWallGrid = new("Создать узел");
+            mnuCreateWallGrid.Click += new EventHandler(tb_Click);
+     
+            mnu.MenuItems.Add(mnuCreateWallGrid);
+        }
+
+        void tb_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("FF");
+            CreateBlockTableRecord();
+            //throw new NotImplementedException();
+        }
 
         [Teigha.Runtime.CommandMethod("CreateBlockTableRecord")]
         public void CreateBlockTableRecord()

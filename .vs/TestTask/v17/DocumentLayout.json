@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,6 +59,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
@@ -106,9 +110,9 @@
               "Title": "Node.cs",
               "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\Node.cs",
               "RelativeDocumentMoniker": "CadCommands\\Node.cs",
-              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\Node.cs",
-              "RelativeToolTip": "CadCommands\\Node.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\Node.cs*",
+              "RelativeToolTip": "CadCommands\\Node.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T16:32:17.346Z",
               "EditorCaption": ""

@@ -13,3 +13,4 @@ C:\Users\sasha\source\repos\TestTask\obj\Debug\net6.0-windows\TestTask.dll
 C:\Users\sasha\source\repos\TestTask\obj\Debug\net6.0-windows\refint\TestTask.dll
 C:\Users\sasha\source\repos\TestTask\obj\Debug\net6.0-windows\TestTask.pdb
 C:\Users\sasha\source\repos\TestTask\obj\Debug\net6.0-windows\ref\TestTask.dll
+C:\Users\sasha\source\repos\TestTask\obj\Debug\net6.0-windows\TestTask.sourcelink.json
