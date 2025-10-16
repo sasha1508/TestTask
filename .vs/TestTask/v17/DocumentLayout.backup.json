@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\sasha\\source\\repos\\TestTask\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|c:\\users\\sasha\\source\\repos\\testtask\\cadcommands\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|solutionrelative:cadcommands\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|c:\\users\\sasha\\source\\repos\\testtask\\cadcommands\\hellodlgcmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|solutionrelative:cadcommands\\hellodlgcmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,6 +74,10 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
@@ -89,8 +97,25 @@
               "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\Node.cs",
+              "RelativeDocumentMoniker": "CadCommands\\Node.cs",
+              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\Node.cs",
+              "RelativeToolTip": "CadCommands\\Node.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:32:17.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "HelloDlgCmd.cs",
               "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\HelloDlgCmd.cs",
               "RelativeDocumentMoniker": "CadCommands\\HelloDlgCmd.cs",
@@ -103,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "HelloConsoleCmd.cs",
               "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\HelloConsoleCmd.cs",
               "RelativeDocumentMoniker": "CadCommands\\HelloConsoleCmd.cs",
@@ -111,12 +136,11 @@
               "RelativeToolTip": "CadCommands\\HelloConsoleCmd.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T16:24:42.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T16:24:42.756Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "HelloCmd.cs",
               "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\HelloCmd.cs",
               "RelativeDocumentMoniker": "CadCommands\\HelloCmd.cs",
@@ -124,8 +148,7 @@
               "RelativeToolTip": "CadCommands\\HelloCmd.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T16:21:50.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T16:21:50.137Z"
             }
           ]
         }
