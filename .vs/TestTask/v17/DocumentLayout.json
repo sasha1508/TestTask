@@ -7,24 +7,16 @@
       "RelativeMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|solutionrelative:cadcommands\\makecontextmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|c:\\users\\sasha\\source\\repos\\testtask\\cadcommands\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|solutionrelative:cadcommands\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|c:\\users\\sasha\\source\\repos\\testtask\\cadcommands\\graphedge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|solutionrelative:cadcommands\\graphedge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|c:\\users\\sasha\\source\\repos\\testtask\\cadcommands\\graphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|solutionrelative:cadcommands\\graphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|c:\\users\\sasha\\source\\repos\\testtask\\cadcommands\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|solutionrelative:cadcommands\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|c:\\users\\sasha\\source\\repos\\testtask\\cadcommands\\helloconsolecmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|solutionrelative:cadcommands\\helloconsolecmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|c:\\users\\sasha\\source\\repos\\testtask\\cadcommands\\hellocmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|solutionrelative:cadcommands\\hellocmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|c:\\users\\sasha\\source\\repos\\testtask\\cadcommands\\hellodlgcmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA17369F-BDB1-43C3-8EFE-F0790B4D1279}|TestTask.csproj|solutionrelative:cadcommands\\hellodlgcmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,10 +62,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
@@ -83,10 +71,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
@@ -109,12 +93,43 @@
               "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GraphEdge.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\GraphEdge.cs",
+              "RelativeDocumentMoniker": "CadCommands\\GraphEdge.cs",
+              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\GraphEdge.cs",
+              "RelativeToolTip": "CadCommands\\GraphEdge.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T16:09:03.058Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GraphNode.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\GraphNode.cs",
+              "RelativeDocumentMoniker": "CadCommands\\GraphNode.cs",
+              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\GraphNode.cs",
+              "RelativeToolTip": "CadCommands\\GraphNode.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAIQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:32:17.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Graph.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\Graph.cs",
+              "RelativeDocumentMoniker": "CadCommands\\Graph.cs",
+              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\Graph.cs",
+              "RelativeToolTip": "CadCommands\\Graph.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T16:44:02.481Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -122,76 +137,11 @@
               "Title": "MakeContextMenu.cs",
               "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\MakeContextMenu.cs",
               "RelativeDocumentMoniker": "CadCommands\\MakeContextMenu.cs",
-              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\MakeContextMenu.cs",
-              "RelativeToolTip": "CadCommands\\MakeContextMenu.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\MakeContextMenu.cs*",
+              "RelativeToolTip": "CadCommands\\MakeContextMenu.cs*",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-17T18:21:57.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Graph.cs",
-              "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\Graph.cs",
-              "RelativeDocumentMoniker": "CadCommands\\Graph.cs",
-              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\Graph.cs",
-              "RelativeToolTip": "CadCommands\\Graph.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T16:44:02.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Node.cs",
-              "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\Node.cs",
-              "RelativeDocumentMoniker": "CadCommands\\Node.cs",
-              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\Node.cs",
-              "RelativeToolTip": "CadCommands\\Node.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAFQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T16:32:17.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HelloDlgCmd.cs",
-              "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\HelloDlgCmd.cs",
-              "RelativeDocumentMoniker": "CadCommands\\HelloDlgCmd.cs",
-              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\HelloDlgCmd.cs",
-              "RelativeToolTip": "CadCommands\\HelloDlgCmd.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T16:26:35.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HelloConsoleCmd.cs",
-              "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\HelloConsoleCmd.cs",
-              "RelativeDocumentMoniker": "CadCommands\\HelloConsoleCmd.cs",
-              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\HelloConsoleCmd.cs",
-              "RelativeToolTip": "CadCommands\\HelloConsoleCmd.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T16:24:42.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HelloCmd.cs",
-              "DocumentMoniker": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\HelloCmd.cs",
-              "RelativeDocumentMoniker": "CadCommands\\HelloCmd.cs",
-              "ToolTip": "C:\\Users\\sasha\\source\\repos\\TestTask\\CadCommands\\HelloCmd.cs",
-              "RelativeToolTip": "CadCommands\\HelloCmd.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T16:21:50.137Z",
               "EditorCaption": ""
             }
           ]

@@ -9,17 +9,17 @@ using System.Windows.Navigation;
 using System.Xml.Linq;
 using Teigha.DatabaseServices;
 using Teigha.DatabaseServices.Filters;
+using Teigha.Geometry;
 
 namespace TestTask.CadCommands
 {
-    public partial class Node
+    public partial class GraphNode
     {
-        private static int index;
-        private int id = 0; 
+        
 
-        public Node()
+        public GraphNode(int id)
         {
-            index++;
+            this.id = id;
             CreateBlockTableRecord();
         }
 
@@ -50,7 +50,6 @@ namespace TestTask.CadCommands
             pln.Closed = true;
 
             // Создаем новое определение блока
-            id = index;
             Teigha.DatabaseServices.BlockTableRecord newBlock = new() { Name = $"Node{id}" };
 
             // Добавляем примитивы в блок
@@ -75,6 +74,7 @@ namespace TestTask.CadCommands
 
                 // Создаем вставку нового определения блока
                 Teigha.DatabaseServices.BlockReference newBR = new(new Teigha.Geometry.Point3d(100, 100, 0), newBlockId);
+                position = newBR.Position;
 
                 // Открываем пространство модели для записи, чтобы добавить в него вставку блока
                 Teigha.DatabaseServices.BlockTableRecord? modelSpace =
@@ -143,5 +143,10 @@ namespace TestTask.CadCommands
                 trans.Abort();
             }
         }
+
+        public Point3d GetPosition() { return position; }
+
+        private readonly int id = 0;
+        private Point3d position;
     }
 }
