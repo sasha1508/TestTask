@@ -50,7 +50,7 @@ namespace TestTask.CadCommands
             pln.Closed = true;
 
             // Создаем новое определение блока
-            Teigha.DatabaseServices.BlockTableRecord newBlock = new() { Name = $"Node{id}" };
+            Teigha.DatabaseServices.BlockTableRecord newBlock = new() { Name = $"Node_{id}" };
 
             // Добавляем примитивы в блок
             newBlock.AppendEntity(crcl);

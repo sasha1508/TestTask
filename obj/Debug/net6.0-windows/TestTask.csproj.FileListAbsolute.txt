@@ -14,3 +14,9 @@ C:\Users\sasha\source\repos\TestTask\obj\Debug\net6.0-windows\refint\TestTask.dl
 C:\Users\sasha\source\repos\TestTask\obj\Debug\net6.0-windows\TestTask.pdb
 C:\Users\sasha\source\repos\TestTask\obj\Debug\net6.0-windows\ref\TestTask.dll
 C:\Users\sasha\source\repos\TestTask\obj\Debug\net6.0-windows\TestTask.sourcelink.json
+C:\Users\sasha\source\repos\TestTask\bin\Debug\net6.0-windows\mapibasetypes.dll
+C:\Users\sasha\source\repos\TestTask\bin\Debug\net6.0-windows\mapibasetypes.xml
+C:\Users\sasha\source\repos\TestTask\bin\Debug\net6.0-windows\mt.dll
+C:\Users\sasha\source\repos\TestTask\bin\Debug\net6.0-windows\et.dll
+C:\Users\sasha\source\repos\TestTask\bin\Debug\net6.0-windows\mctyp.dll
+C:\Users\sasha\source\repos\TestTask\bin\Debug\net6.0-windows\mcgel.dll

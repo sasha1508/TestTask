@@ -15,5 +15,12 @@
 	  <Reference Include="hostmgd">
 	    <HintPath>D:\Program Files\Nanosoft AS\nanoCAD x64 25.0\bin\hostmgd.dll</HintPath>
 	  </Reference>
+	  <Reference Include="MapiBaseTypes">
+	    <HintPath>D:\Program Files\Nanosoft AS\nanoCAD x64 25.0\bin_nPlat\mapibasetypes.dll</HintPath>
+	  </Reference>
+	  <Reference Include="mapimgd">
+	    <HintPath>D:\Program Files\Nanosoft AS\nanoCAD x64 25.0\bin_nPlat\mapimgd.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
 	</ItemGroup>
 </Project>

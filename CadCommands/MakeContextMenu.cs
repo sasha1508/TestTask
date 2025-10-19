@@ -1,12 +1,16 @@
 ﻿using HostMgd.EditorInput;
 using HostMgd.Windows;
+using Multicad.DatabaseServices;
+using Multicad.DatabaseServices.StandardObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using Teigha.DatabaseServices;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TestTask.CadCommands
 {
@@ -38,32 +42,26 @@ namespace TestTask.CadCommands
 
         private void ChangeNodeView(object? sender, EventArgs e)
         {
-            // Получение ссылки на активный документ
-            HostMgd.ApplicationServices.Document doc = HostMgd.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
-
-            // Получение ссылки на редактор докумена
-            HostMgd.EditorInput.Editor ed = doc.Editor;
-
-            HostMgd.EditorInput.PromptSelectionResult res = ed.GetSelection();
-
-
-            if (res.Status == PromptStatus.OK)
+            Multicad.McObjectId objId = Multicad.DatabaseServices.McObjectManager.SelectObject("Выбери узел графа: ");
+            if (objId.GetObject().IsKindOf(McBlockRef.TypeID))
             {
-                foreach (SelectedObject selObj in res.Value)
-                {
-                    
-                    //selObj.GetType();
-                    ed.WriteMessage("Выбран объект: " );
+                MessageBox.Show("OK");
+                McBlockRef ent = (McBlockRef)objId.GetObject();
+                string blockName = ent.BlockName;
+                MessageBox.Show(blockName);
 
-                   //doc.Database.obj
-                    //Entity ent = selObj.Object as Entity;
-                    //if (ent != null)
-                    //    selectedEntities.Add(ent);
+                if (blockName.Contains("Node_"))
+                {
+                    string idString = blockName.Substring(5);
+                    int id = int.Parse(idString);
+
+                    MessageBox.Show($"ID: {id}");
+
+                    return;
                 }
             }
-
-
-
+            
+            MessageBox.Show("Выбранный объект не является узлом графа");
         }
 
         private Graph? graph;

@@ -9,7 +9,8 @@
       "TestTask/1.0.0": {
         "dependencies": {
           "hostdbmgd": "1.0.0.0",
-          "hostmgd": "1.0.0.0"
+          "hostmgd": "1.0.0.0",
+          "mapibasetypes": "1.0.9299.42793"
         },
         "runtime": {
           "TestTask.dll": {}
@@ -30,6 +31,14 @@
             "fileVersion": "25.0.6917.8825"
           }
         }
+      },
+      "mapibasetypes/1.0.9299.42793": {
+        "runtime": {
+          "mapibasetypes.dll": {
+            "assemblyVersion": "1.0.9299.42793",
+            "fileVersion": "25.0.6917.4755"
+          }
+        }
       }
     }
   },
@@ -45,6 +54,11 @@
       "sha512": ""
     },
     "hostmgd/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "mapibasetypes/1.0.9299.42793": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
