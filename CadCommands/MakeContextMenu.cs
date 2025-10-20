@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
@@ -45,17 +46,34 @@ namespace TestTask.CadCommands
             Multicad.McObjectId objId = Multicad.DatabaseServices.McObjectManager.SelectObject("Выбери узел графа: ");
             if (objId.GetObject().IsKindOf(McBlockRef.TypeID))
             {
-                MessageBox.Show("OK");
                 McBlockRef ent = (McBlockRef)objId.GetObject();
                 string blockName = ent.BlockName;
-                MessageBox.Show(blockName);
-
-                if (blockName.Contains("Node_"))
+                Multicad.Geometry.Point3d insertPoint = ent.InsertPoint;
+                Teigha.Geometry.Point3d blockInsertPoint = new(insertPoint.X, insertPoint.Y, insertPoint.Z);
+                
+                if (blockName.Contains("CircleNode_"))
                 {
-                    string idString = blockName.Substring(5);
+                    string idString = blockName.Substring(11);
                     int id = int.Parse(idString);
 
-                    MessageBox.Show($"ID: {id}");
+                    if (graph != null)
+                    {
+                        GraphNode? node = graph.FindNode(id);
+                        node?.ChengeViewNode(blockInsertPoint, GraphNode.NodeType.Circle);
+                    }
+
+                    return;
+                }
+                else if (blockName.Contains("TriangleNode_"))
+                {
+                    string idString = blockName.Substring(13);
+                    int id = int.Parse(idString);
+
+                    if (graph != null)
+                    {
+                        GraphNode? node = graph.FindNode(id);
+                        node?.ChengeViewNode(blockInsertPoint, GraphNode.NodeType.Triangle);
+                    }
 
                     return;
                 }

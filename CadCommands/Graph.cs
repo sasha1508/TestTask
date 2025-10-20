@@ -48,7 +48,18 @@ namespace TestTask.CadCommands
 
             return newNode;
         }
-        
+
+        public GraphNode? FindNode(int iID)
+        {
+            foreach (GraphNode node in nodeSet)
+            {
+                if (node.GetID() == iID)
+                    return node;
+            }
+
+            return null;
+        }
+
         private HashSet<GraphNode> nodeSet;
         private HashSet<GraphEdge> edgeSet;
     }

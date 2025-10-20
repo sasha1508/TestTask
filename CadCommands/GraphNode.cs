@@ -1,10 +1,12 @@
 ﻿using HostMgd.Windows;
+using Multicad.DatabaseServices.StandardObjects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Navigation;
 using System.Xml.Linq;
 using Teigha.DatabaseServices;
@@ -15,7 +17,11 @@ namespace TestTask.CadCommands
 {
     public partial class GraphNode
     {
-        
+        public enum NodeType
+        {
+            Circle,
+            Triangle
+        }
 
         public GraphNode(int id)
         {
@@ -24,6 +30,7 @@ namespace TestTask.CadCommands
         }
 
         public int GetID() { return id; }
+
 
         public void CreateBlockTableRecord()
         {
@@ -37,24 +44,27 @@ namespace TestTask.CadCommands
             Teigha.DatabaseServices.Database db = doc.Database;
 
             // Создаем примитивы для нового блока
-            Teigha.DatabaseServices.Circle crcl = new()
+            Teigha.DatabaseServices.Circle circle = new()
             {
-                Center = new Teigha.Geometry.Point3d(100, 100, 100),
+                Center = new Teigha.Geometry.Point3d(0, 0, 0),
                 Radius = 100 
             };
-            Teigha.DatabaseServices.Polyline pln = new();
-            pln.AddVertexAt(0, new Teigha.Geometry.Point2d(-10, -10), 0, 0, 0);
-            pln.AddVertexAt(1, new Teigha.Geometry.Point2d(210, 210), 0, 0, 0);
-            pln.AddVertexAt(2, new Teigha.Geometry.Point2d(210, -10), 0, 0, 0);
-            pln.AddVertexAt(3, new Teigha.Geometry.Point2d(-10, 210), 0, 0, 0);
-            pln.Closed = true;
+            circle.Color = Teigha.Colors.Color.FromRgb(0, 0, 255);
+
+            Teigha.DatabaseServices.Polyline polyline = new();
+            polyline.AddVertexAt(0, new Teigha.Geometry.Point2d(-100, -60), 0, 0, 0);
+            polyline.AddVertexAt(1, new Teigha.Geometry.Point2d(0, 110), 0, 0, 0);
+            polyline.AddVertexAt(2, new Teigha.Geometry.Point2d(100, -60), 0, 0, 0);
+            polyline.Closed = true;
+            polyline.Color = Teigha.Colors.Color.FromRgb(255, 0, 0);
 
             // Создаем новое определение блока
-            Teigha.DatabaseServices.BlockTableRecord newBlock = new() { Name = $"Node_{id}" };
+            Teigha.DatabaseServices.BlockTableRecord newBlockCircle = new() { Name = $"CircleNode_{id}" };
+            Teigha.DatabaseServices.BlockTableRecord newBlockTriangle = new() { Name = $"TriangleNode_{id}" };
 
             // Добавляем примитивы в блок
-            newBlock.AppendEntity(crcl);
-            newBlock.AppendEntity(pln);
+            newBlockCircle.AppendEntity(circle);
+            newBlockTriangle.AppendEntity(polyline);
 
             // Мы создали определение нового блока. Теперь это определение
             // нужно добавить в базу данных чертежа, чтобы можно было
@@ -70,19 +80,18 @@ namespace TestTask.CadCommands
                 if (blockTable == null) return;
 
                 // Добавляем новое определение блока в таблицу блоков
-                Teigha.DatabaseServices.ObjectId newBlockId = blockTable.Add(newBlock);
+                Teigha.DatabaseServices.ObjectId newBlockId = blockTable.Add(newBlockCircle);
+                Teigha.DatabaseServices.ObjectId newBlockIdTriangle = blockTable.Add(newBlockTriangle);
 
                 // Создаем вставку нового определения блока
-                Teigha.DatabaseServices.BlockReference newBR = new(new Teigha.Geometry.Point3d(100, 100, 0), newBlockId);
-                position = newBR.Position;
 
+                Teigha.DatabaseServices.BlockReference newBR = new(new Teigha.Geometry.Point3d(100, 100, 0), newBlockId);
+                
                 // Открываем пространство модели для записи, чтобы добавить в него вставку блока
                 Teigha.DatabaseServices.BlockTableRecord? modelSpace =
                                    trans.GetObject(blockTable[Teigha.DatabaseServices.BlockTableRecord.ModelSpace], Teigha.DatabaseServices.OpenMode.ForWrite)
                                    as Teigha.DatabaseServices.BlockTableRecord;
                 if (modelSpace == null) return;
-
-              
 
                 // Добавляем эту вставку в пространство модели и базу данных чертежа
                 modelSpace.AppendEntity(newBR);
@@ -96,8 +105,7 @@ namespace TestTask.CadCommands
             // и вставку этого блока в пространство модели, мы можем проверить, появились ли они там
 
             // Открываем транзакцию заново, чтобы проверить, как изменилось содержимое пространства модели и базы данных
-            using (Teigha.DatabaseServices.Transaction trans =
-                     db.TransactionManager.StartTransaction())
+            using (Teigha.DatabaseServices.Transaction trans = db.TransactionManager.StartTransaction())
             {
                 // Открываем таблицу блоков для чтения
                 Teigha.DatabaseServices.BlockTable? blockTable =
@@ -126,11 +134,11 @@ namespace TestTask.CadCommands
 
                 // Открываем для чтения созданный нами блок
                 Teigha.DatabaseServices.BlockTableRecord? btr = 
-                    trans.GetObject(blockTable[newBlock.Name], Teigha.DatabaseServices.OpenMode.ForRead) as Teigha.DatabaseServices.BlockTableRecord;
+                    trans.GetObject(blockTable[newBlockCircle.Name], Teigha.DatabaseServices.OpenMode.ForRead) as Teigha.DatabaseServices.BlockTableRecord;
                 if(btr == null) return;
 
                 // Перебираем все его вставки и выводим в командную строку служебный блок, в котором находится вставка, имя и положение каждой вставки
-                ed.WriteMessage($"У блока {newBlock.Name} {btr.GetBlockReferenceIds(true, false).Count} вставок");
+                ed.WriteMessage($"У блока {newBlockCircle.Name} {btr.GetBlockReferenceIds(true, false).Count} вставок");
                 foreach (Teigha.DatabaseServices.ObjectId brId in btr.GetBlockReferenceIds(true, false))
                 {
                     Teigha.DatabaseServices.BlockReference? br = 
@@ -139,14 +147,79 @@ namespace TestTask.CadCommands
                     ed.WriteMessage($"{br.BlockName} {br.Name} X:{br.Position.X} Y:{br.Position.Y} Z:{br.Position.Z}");
                 }
 
+                
+
                 // Завершаем транзакцию
                 trans.Abort();
             }
         }
 
-        public Point3d GetPosition() { return position; }
+        public void ChengeViewNode(Point3d iPosition, NodeType iNodeType)
+        {
+            // Получение ссылки на активный документ
+            HostMgd.ApplicationServices.Document doc = HostMgd.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
+
+            // Получение ссылки на базу данных документа
+            Teigha.DatabaseServices.Database db = doc.Database;
+
+            // Начало транзакции с базой данных документа
+            using (Teigha.DatabaseServices.Transaction trans = db.TransactionManager.StartTransaction())
+            {
+                // Открываем таблицу блоков для изменения
+                Teigha.DatabaseServices.BlockTable? blockTable =
+                            trans.GetObject(db.BlockTableId, Teigha.DatabaseServices.OpenMode.ForWrite)
+                            as Teigha.DatabaseServices.BlockTable;
+                if (blockTable == null) return;
+
+
+                ObjectId blockCircle = blockTable[$"CircleNode_{id}"];
+                ObjectId blockTriangle = blockTable[$"TriangleNode_{id}"];
+
+                Teigha.DatabaseServices.BlockTableRecord newBlock;
+
+                if (iNodeType == NodeType.Circle) 
+                    newBlock = (Teigha.DatabaseServices.BlockTableRecord)blockCircle.GetObject(OpenMode.ForWrite);
+                else
+                    newBlock = (Teigha.DatabaseServices.BlockTableRecord)blockTriangle.GetObject(OpenMode.ForWrite);
+
+                // Перебираем все вставки блока и удаляем их
+                foreach (Teigha.DatabaseServices.ObjectId brId in newBlock.GetBlockReferenceIds(true, false))
+                {
+                    Teigha.DatabaseServices.BlockReference? br =
+                        trans.GetObject(brId, Teigha.DatabaseServices.OpenMode.ForWrite) as Teigha.DatabaseServices.BlockReference;
+                    if (br == null) return;
+
+                    br.Erase(true);
+                }
+
+                // Создаем вставку нового определения блока
+                Teigha.DatabaseServices.BlockReference newBR;
+                if (iNodeType == NodeType.Circle)
+                    newBR = new(iPosition, blockTriangle);
+                else
+                    newBR = new(iPosition, blockCircle);
+
+                // Открываем пространство модели для записи, чтобы добавить в него вставку блока
+                Teigha.DatabaseServices.BlockTableRecord? modelSpace =
+                                   trans.GetObject(blockTable[Teigha.DatabaseServices.BlockTableRecord.ModelSpace], Teigha.DatabaseServices.OpenMode.ForWrite)
+                                   as Teigha.DatabaseServices.BlockTableRecord;
+                if (modelSpace == null) return;
+
+                // Добавляем эту вставку в пространство модели и базу данных чертежа
+                modelSpace.AppendEntity(newBR);
+                trans.AddNewlyCreatedDBObject(newBR, true);
+
+                // Завершаем транзакцию
+                trans.Commit();
+            }
+
+
+
+        }
+
+        
 
         private readonly int id = 0;
-        private Point3d position;
+        
     }
 }
